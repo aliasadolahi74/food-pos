@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/app/components/Sidebar";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Sample",
   description: "Sample",
+  authors: [{ name: "Ali Asadollahi", url: "https://github.com/aliasadolahi74" }],
 };
 
 const workSans = Work_Sans({ subsets: ["latin"] });
