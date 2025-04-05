@@ -24,7 +24,9 @@ const SidebarNav = () => {
   return (
     <nav className="flex flex-col items-center ml-3 py-6 bg-dark-bg">
       <button>
-        <div className={`p-3 rounded-lg flex justify-center`}>
+        <div className={cn(
+          "p-3 rounded-lg flex justify-center",
+        )}>
           <Logo />
         </div>
       </button>
