@@ -34,7 +34,7 @@ const SidebarNav = () => {
           onClick={() => handleClick(label)}
           className={cn(
             "group p-4 rounded-bl-lg rounded-tl-lg w-full transition-all duration-200 my-1",
-            activeItem === label ? "bg-active-bg/50" : "hover:bg-active-bg/50"
+            activeItem === label ? "bg-active-bg/50" : "hover:bg-active-bg/50",
           )}
           aria-label={label}
         >
@@ -43,11 +43,15 @@ const SidebarNav = () => {
               ? "bg-accent"
               : "bg-transparent group-hover:bg-accent/20"
           }`}>
-            <Icon className={`
-              w-6 h-6 
-              ${activeItem === label ? "[&>*]:fill-current [&>*]:stroke-current" : "text-gray-400"}
-              
-            `} />
+            <Icon
+              className={cn(
+                "w-6 h-6", // Base dimensions
+                activeItem === label
+                  ? "[&>*]:fill-current [&>*]:stroke-current" // Active state
+                  : "text-gray-400 [&>*]:stroke-current", // Inactive state
+                "transition-colors duration-200", // Smooth transitions
+              )}
+            />
           </div>
         </button>
       ))}
