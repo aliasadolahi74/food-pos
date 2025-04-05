@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
     <body className={cn(`${workSans.className} antialiased h-full w-full flex`)}>
     <Sidebar />
-    <main className="flex-1 p-6">{children}</main>
+    <main className="flex-1">{children}</main>
     </body>
     </html>
   );
