@@ -27,7 +27,9 @@ const SidebarNav = () => {
         <div className={cn(
           "p-3 rounded-lg flex justify-center",
         )}>
-          <Logo />
+          <Logo className={cn(
+            "w-14 h-14",
+          )} />
         </div>
       </button>
       {navItems.map(({ icon: Icon, label }) => (
@@ -40,11 +42,11 @@ const SidebarNav = () => {
           )}
           aria-label={label}
         >
-          <div className={`p-3 rounded-lg flex justify-center ${
+          <div className={cn(`p-3 rounded-lg flex justify-center ${
             activeItem === label
               ? "bg-accent"
               : "bg-transparent group-hover:bg-accent/20"
-          }`}>
+          }`)}>
             <Icon
               className={cn(
                 "w-6 h-6", // Base dimensions

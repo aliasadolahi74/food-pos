@@ -41,7 +41,6 @@
         "./public/*"
       ]
     },
-    "forceConsistentCasingInFileNames": true,
     "types": [
       "jest",
       "node"
