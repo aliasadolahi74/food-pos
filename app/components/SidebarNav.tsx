@@ -1,7 +1,7 @@
 "use client";
-
 import { useState } from "react";
 import { Dashboard, Exit, Home, Logo, Message, Question, Setting } from "public/assets";
+import { cn } from "src/lib/utils";
 
 const navItems = [
   { icon: Home, label: "Home" },
@@ -22,7 +22,7 @@ const SidebarNav = () => {
   };
 
   return (
-    <nav className="flex flex-col items-center ml-3 py-6 bg-[#1F1D2B]">
+    <nav className="flex flex-col items-center ml-3 py-6 bg-dark-bg">
       <button>
         <div className={`p-3 rounded-lg flex justify-center`}>
           <Logo />
@@ -32,17 +32,16 @@ const SidebarNav = () => {
         <button
           key={label}
           onClick={() => handleClick(label)}
-          className={`group p-4 rounded-bl-lg rounded-tl-lg w-full transition-all duration-200 my-1 ${
-            activeItem === label
-              ? "bg-[#252836]/50"
-              : "hover:bg-[#252836]/50"
-          }`}
+          className={cn(
+            "group p-4 rounded-bl-lg rounded-tl-lg w-full transition-all duration-200 my-1",
+            activeItem === label ? "bg-active-bg/50" : "hover:bg-active-bg/50"
+          )}
           aria-label={label}
         >
           <div className={`p-3 rounded-lg flex justify-center ${
             activeItem === label
-              ? "bg-[#EB966A]"
-              : "bg-transparent group-hover:bg-[#EB966A]/20"
+              ? "bg-accent"
+              : "bg-transparent group-hover:bg-accent/20"
           }`}>
             <Icon className={`
               w-6 h-6 

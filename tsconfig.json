@@ -37,10 +37,15 @@
       "Base/*": [
         "./src/features/Base/*"
       ],
-      "public/*": ["./public/*"]
+      "public/*": [
+        "./public/*"
+      ]
     },
     "forceConsistentCasingInFileNames": true,
-    "types": ["jest", "node"]
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "include": [
     "types/**/*.d.ts",
@@ -48,9 +53,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
-  ],
+  ]
 }
